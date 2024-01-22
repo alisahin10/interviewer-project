@@ -94,18 +94,6 @@ DATABASES = {
 }
 
 
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'interviewer-project',
-#         'USER': 'postgres',
-#         'PASSWORD': 'FAq1auyu@',
-#         'HOST': 'interviewer-project:europe-central2:interviewer-instance',
-#         'PORT': '5432',
-#     }
-# }
-
 
 
 
