@@ -154,26 +154,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'contact.interviewer.gp@gmail.com'  # Your Gmail email address
-EMAIL_HOST_PASSWORD = 'uiga qinz hxxz kvnh'  # Your Gmail email password or an App Password
-EMAIL_SSL_CERTFILE = None  # Path to a PEM-formatted file that contains your SSL certificate (if needed)
-EMAIL_SSL_KEYFILE = None  # Path to a PEM-formatted file that contains your SSL key (if needed)
-EMAIL_SSL_CERT_REQS = ssl.CERT_NONE  # Disables certificate verification
-
-
-
-
-
-
-
-# APPENGINE_URL = env('APPENGINE_URL', default=None)
-# if APPENGINE_URL:
-#     # ensure a scheme is present in the URL before it's processed.
-#     if not urlparse(APPENGINE_URL).scheme:
-#         APPENGINE_URL = f'https://{APPENGINE_URL}'
-#
-#     ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
-#     CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
-#     SECURE_SSL_REDIRECT = True
-# else:
-#     ALLOWED_HOSTS = ['*']
+EMAIL_HOST_USER = 'contact.interviewer.gp@gmail.com'
+EMAIL_HOST_PASSWORD = 'uiga qinz hxxz kvnh'
+EMAIL_SSL_CERTFILE = None
+EMAIL_SSL_KEYFILE = None
+EMAIL_SSL_CERT_REQS = ssl.CERT_NONE
