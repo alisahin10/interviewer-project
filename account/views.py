@@ -116,32 +116,6 @@ def profile_update(request):
 
     return render(request, "update_user.html", context)
 
-"""
-def update_user(request):
-    if request.user.is_authenticated:
-        current_user = User.objects.get(id=request.user.id)
-        form = UserProfileForm(request.POST or None, instance=current_user)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-
-
-        return render(request, "update_user.html", {'form': form})
-
-
-def update_user_profile(request):
-    if request.user.is_authenticated:
-        current_user = User.objects.get(id=request.user.id)
-        picture_form = UserPictureForm(request.POST or None, instance=current_user.profile)
-        if picture_form.is_valid():
-            picture_form.save()
-            return redirect('home')
-
-
-        return render(request, "update_user.html", {'picture_form': picture_form})
-        """
-
-
 
 def retrieve_data(request):
     questions = Question.objects.all()

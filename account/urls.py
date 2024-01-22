@@ -7,8 +7,4 @@ urlpatterns = [
     path("logout", views.logout_request, name="logout"),
     path("profile", views.retrieve_data, name="profile"),
     path("profile_update", views.profile_update, name="profile_update"),
-    # path("update_user", views.update_user, name="update_user")
-    #path('question-data/', views.retrieve_data, name='profile'),
-
-
 ]

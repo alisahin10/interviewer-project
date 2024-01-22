@@ -73,28 +73,6 @@ def questions_by_category(request, slug):
     return render(request, "questionsPage/questions.html", context)
 
 
-# def userprofile(request):
-#     context = {
-#
-#         "questions": Question.objects.all()
-#     }
-#     return render(request, "profile.html", context)
-
-#     path("export_to_csv", views.export_to_csv, name="export_to_csv"),
-"""
-def export_to_csv(request):
-    questions = Question.objects.all()
-    response = HttpResponse('text/csv')
-    response['Content-Disposition'] = 'attachement; filename=question_export.csv'
-    writer = csv.writer(response)
-    writer.writerow(['Id', 'Title', 'Description', 'Date_posted', 'Category', 'Question Title',
-                     'Test Name', 'Department Name', 'Question Description', 'Question Number'])
-    question_fields = questions.values_list('id', 'title', 'description', 'date_posted', 'category', 'question_title',
-                                            'test_name', 'department_name', 'question_description', 'question_number')
-    for question in question_fields:
-        writer.writerow(question)
-    return response
-    """
 
 def export_questions_to_xlsx(request):
     questions = Question.objects.all().values(
