@@ -1,0 +1,48 @@
+{% extends "product-base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="display-flex flex-col">
+
+        <div class="display-flex flex-col justify-center align-center gap-8">
+
+            <div class="display-flex flex-col gap-8">
+                <h1 class="fs-30">Congratulations you completed the test</h1>
+                <div class="display-flex gap-5 align-center justify-center">
+                    <h3>Your Point : </h3>
+                    <span class="fs-24 fw-500 txt-green"> 90</span>
+                </div>
+            </div>
+
+            <table class="w-100 text-center">
+                <tr>
+                    <th class="p-2">Your Answer</th>
+                    <th class="p-2">Correct Answer</th>
+                </tr>
+                <tr>
+                    <td class=" p-1">A</td>
+                    <td class=" p-1">C</td>
+                </tr>
+                <tr>
+                   <td class=" p-1">D</td>
+                    <td class=" p-1">E</td>
+                </tr>
+                  <tr>
+                   <td class=" p-1">E</td>
+                    <td class=" p-1">A</td>
+                </tr>
+                  <tr>
+                   <td class=" p-1">B</td>
+                    <td class=" p-1">D</td>
+                </tr>
+                  <tr>
+                   <td class=" p-1">C</td>
+                    <td class=" p-1">B</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}

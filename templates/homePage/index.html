@@ -1,0 +1,1083 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Home section start here-->
+    <section id="home" class="home-container display-flex h-100vh p-23-5 bg-main p-r" >
+        <div class="home-wrapper display-flex  w-100 p-r align-center justify-between" role="section" tabindex="0" aria-label="Interviewer Home Section.">
+
+            <div class="home-section-right display-flex flex-col gap-7">
+                <div class="home-section-text">
+                    <h1 class="fs-52" tabindex="0">
+                        <span class="fw-500 txt-white">Success is a journey <br>not a destination</span>
+                    </h1>
+                    <p class="fs-13 fw-400 line-height-5 mt-4 txt-white" tabindex="0">
+                        My short-term goal is to pass this interview. My long-term goal is to invent<br>
+                        a time machine, go back and change everything I've said so far...
+                    </p>
+                </div>
+                <div class="home-section-button display-flex gap-4">
+                    <a href="http://127.0.0.1:8000/#about"  role="button" tabindex="0" class="btn contact-button txt-text-color text-decoration-none  bg-white display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center align-center width-28">
+                        About Us
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="{% url 'questions' %}" role="button" tabindex="0"
+                       class="btn contact-button bg-white text-decoration-none txt-text-color display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center align-center width-28">
+                        Interview
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+                <div class="home-icon display-flex gap-10 mt-10" aria-label="Reach out to social media of Interviewer" role="div" tabindex="0">
+                    <div>
+                        <a href="https://www.instagram.com/alisahin1/" role="button" tabindex="0"  aria-label="Instagram Social Media"
+                           class="home-icon-item text-decoration-none txt-text-color bg-white width-15 height-15 display-flex justify-center align-center radius-fifty">
+                            <i class="fa-brands fa-instagram fs-24 "></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/alisahin1_"  role="button" tabindex="0"  aria-label="Twitter Social Media"
+                           class="home-icon-item text-decoration-none txt-text-color bg-white width-15 height-15 display-flex justify-center align-center radius-fifty">
+                            <i class="fa-brands fa-twitter fs-24"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100005363834327&locale=tr_TR"  role="button" tabindex="0"  aria-label="Facebook Social Media"
+                           class="home-icon-item text-decoration-none txt-text-color  bg-white width-15 height-15 display-flex justify-center align-center radius-fifty">
+                            <i class="fa-brands fa-facebook-f fs-24"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/alisahin1/"  role="button" tabindex="0"  aria-label="Linkedin Social Media"
+                           class="home-icon-item text-decoration-none txt-text-color bg-white width-15 height-15 display-flex justify-center align-center radius-fifty">
+                            <i class="fa-brands fa-linkedin-in fs-24"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-section-left display-flex">
+                <div class="display-flex">
+                    <img src="{% static 'images/home-astrobot-animation.png' %}" alt="" class="responsive">
+                </div>
+            </div>
+            <img src="{% static 'images/cloud.png' %}" alt="" class="cloud-1 p-a">
+            <img src="{% static 'images/cloud.png' %}" alt="" class="cloud-2 p-a">
+            <img src="{% static 'images/cloud.png' %}" alt="" class="cloud-3 p-a">
+            <img src="{% static 'images/cloud.png' %}" alt="" class="cloud-4 p-a">
+        </div>
+    </section>
+    <!-- Home section end here-->
+    <!-- Data section start here-->
+    <section id="data" class="data-container display-flex pr-23-5 pl-23-5 pt-8 pb-8 p-r bg-main justify-center">
+        <div class="data-wrapper display-flex justify-between align-center w-100 flex-wrap"  role="div" tabindex="0" aria-label="Interviewer number of metrics">
+            <div class="text-center width-75" tabindex="0">
+                <h1 class="numerical-data fs-34  txt-white radius-1 pr-8 pl-8 pb-4 pt-4">Active User</h1>
+                <h3 class="fs-34  txt-white fw-700 mt-5">32,000+</h3>
+            </div>
+            <div class="text-center width-75" tabindex="0">
+                <h1 class="numerical-data fs-34  txt-white radius-1 pr-8 pl-8 pb-4 pt-4">Departmant</h1>
+                <h3 class="fs-34  txt-white fw-700 mt-5">50</h3>
+            </div>
+            <div class="text-center width-75" tabindex="0">
+                <h1 class="numerical-data fs-34  txt-white radius-1 pr-8 pl-8 pb-4 pt-4">Questions</h1>
+                <h3 class="fs-34  txt-white fw-700 mt-5">1000+</h3>
+            </div>
+            <div class="text-center width-75" tabindex="0">
+                <h1 class="numerical-data fs-34  txt-white radius-1 pr-8 pl-8 pb-4 pt-4">Awards</h1>
+                <h3 class="fs-34  txt-white fw-700 mt-5">2</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Data section end here-->
+    <!-- About section start here-->
+    <section id="about" class="about-container display-flex p-23-5 justify-center bg-secondary p-r">
+        <div class="about-wrapper display-flex flex-col justify-center align-center gap-25 w-100" role="div" tabindex="0" aria-label="Interviewer about section">
+            <h1 class="fs-44 fw-500 line-height-15 text-center txt-blue-400" tabindex="0">Difficulties are <span>ornamentals</span>
+                that
+                <br>improves the level of achievement.
+            </h1>
+
+            <!--  <hr class="about-hr bg-yellow width-75 height-2 p-a">-->
+            <div class="about-content display-grid gap-41">
+                <div class="about-img">
+                    <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive">
+                </div>
+                <div  tabindex="0">
+                    <h3 class="txt-blue-900 fs-24 fw-600 ">About us</h3>
+                    <p class="fs-16 fw-400 line-height-7 mt-6">
+                        Nowadays, many companies are looking for new colleagues with their needs.
+                        They open job applications to hire these new colleagues. They also conduct
+                        interview exams in different formats for candidates who move on to the next
+                        stage of job application in order to recruit the best and most successful
+                        person for the company.
+                    </p>
+                    <p class="fs-16 fw-400 mt-6 line-height-7">
+                        Naturally, because there are so many different tests and companies ask different
+                        questions, interviewees search for different types of interview questions or the
+                        interview questions of the hiring company on different sites on the internet.
+                    </p>
+                    <p class="fs-16 fw-400 mt-6 line-height-7">
+                        Interview preparation can often be a time-consuming process for job seekers.
+                        The aim of this project is to collect different interview questions and tests related
+                        to different business fields on the same site, to enable users to solve interview
+                        questions without wasting time and to be successful in recruitment interview
+                        exams. Exposure to a variety of interview questions can help candidates
+                        better prepare.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="shape-about p-a" width="180" height="180" viewBox="0 0 230 230"
+             fill="none">
+            <g clip-path="url(#clip0_92_1407)">
+                <path d="M204.095 103.421L67.6857 38.0021C70.2166 36.4497 72.8422 35.0004 75.5053 33.7131L202.545 94.6381C203.208 97.5207 203.722 100.475 204.095 103.421Z"
+                      fill="#DE003E"/>
+                <path d="M204.422 122.897L52.2932 49.9401C54.1804 48.1078 56.1561 46.3612 58.1858 44.7126L204.809 115.03C204.794 117.645 204.669 120.279 204.422 122.897Z"
+                      fill="#DE003E"/>
+                <path d="M195.942 153.436C195.482 154.397 194.953 155.44 194.293 156.665L32.2788 78.9666C32.8213 77.6852 33.3034 76.6198 33.7641 75.6593C34.2247 74.6988 34.7537 73.6559 35.4133 72.4307L197.428 150.129C196.885 151.41 196.42 152.47 195.942 153.436Z"
+                      fill="#DE003E"/>
+                <path d="M153.766 33.4698C164.214 38.4804 173.437 45.3239 181.194 53.8127L120.708 24.8051C132.201 25.5338 143.294 28.4479 153.766 33.4698Z"
+                      fill="#DE003E"/>
+                <path d="M99.6058 25.9371L193.521 70.9764C195.383 74.3331 197.021 77.8272 198.428 81.3831L88.4189 28.6256C92.0724 27.4963 95.8285 26.6036 99.6058 25.9371Z"
+                      fill="#DE003E"/>
+                <path d="M171.545 184.394L24.921 114.077C24.936 111.462 25.0611 108.828 25.3085 106.209L177.437 179.167C175.55 180.999 173.574 182.745 171.545 184.394Z"
+                      fill="#DE003E"/>
+                <path d="M130.094 203.472L35.9918 158.343C33.9557 154.658 32.2089 150.91 30.7344 147.105L142.149 200.537C138.207 201.787 134.156 202.784 130.094 203.472Z"
+                      fill="#DE003E"/>
+                <path d="M75.9827 195.631C65.5174 190.626 56.3003 183.8 48.5371 175.294L109 204.29C97.5301 203.573 86.4368 200.659 75.9827 195.631Z"
+                      fill="#DE003E"/>
+                <path d="M184.594 171.333L26.9366 95.7242C27.4539 93.2637 28.0882 90.8595 28.7765 88.5531L189.034 165.409C187.69 167.401 186.189 169.389 184.594 171.333Z"
+                      fill="#DE003E"/>
+                <path d="M154.225 195.394L27.1855 134.469C26.5221 131.586 26.0086 128.631 25.6347 125.686L162.045 191.105C159.514 192.657 156.882 194.089 154.225 195.394Z"
+                      fill="#DE003E"/>
+                <path d="M200.954 140.554L40.6965 63.698C42.0468 61.7235 43.548 59.735 45.1194 57.7801L202.8 133.4C202.277 135.843 201.66 138.241 200.954 140.554Z"
+                      fill="#DE003E"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_92_1407">
+                    <rect width="180" height="180" fill="white" transform="translate(0 59.7261) rotate(-19.3788)"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </section>
+    <!-- About section end here-->
+    <!-- Services section start here-->
+    <section id="services" class="services-container display-flex p-23-5  bg-secondary p-r">
+        <div class="services-main-wrapper display-flex flex-col align-center w-100" role="div" tabindex="0" aria-label="Interviewer services section">
+            <h3 class="fs-24 txt-blue-900 fw-600" tabindex="0">Our Services</h3>
+            <h1 class="text-center txt-blue-400 fs-40 fw-500 line-height-15 mt-5" tabindex="0">Your career boost starts here with<br>
+                our tailored interview services.</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" class="services-shape p-a" width="218" height="232"
+                 viewBox="0 0 218 232" fill="none">
+                <path d="M56.8659 80.1159L30.2506 131.49L59.5248 116.797L56.8659 80.1159Z"
+                      fill="url(#paint0_linear_92_1205)"/>
+                <path d="M66.2305 23.0263L56.8659 80.1159L80.9237 52.3005L66.2305 23.0263Z"
+                      fill="url(#paint1_linear_92_1205)"/>
+                <path d="M117.598 49.6401L66.2305 23.0263L80.9237 52.3005L117.598 49.6401Z"
+                      fill="url(#paint2_linear_92_1205)"/>
+                <path d="M174.694 59.0061L145.413 73.6979L117.597 49.6401L174.694 59.0061Z"
+                      fill="url(#paint3_linear_92_1205)"/>
+                <path d="M148.074 110.372L174.695 59.0061L145.413 73.6979L148.074 110.372Z"
+                      fill="url(#paint4_linear_92_1205)"/>
+                <path d="M138.715 167.47L148.073 110.372L124.023 138.189L138.715 167.47Z"
+                      fill="url(#paint5_linear_92_1205)"/>
+                <path d="M30.2511 131.49L87.3422 140.848L59.5254 116.797L30.2511 131.49Z"
+                      fill="url(#paint6_linear_92_1205)"/>
+                <path d="M138.714 167.47L87.3415 140.848L124.023 138.189L138.714 167.47Z"
+                      fill="url(#paint7_linear_92_1205)"/>
+                <path d="M127.914 18.5507L117.598 49.6401L66.2304 23.0263L127.914 18.5507Z"
+                      fill="url(#paint8_linear_92_1205)"/>
+                <path d="M25.7767 69.7998L56.866 80.1159L66.2306 23.0263L25.7767 69.7998Z"
+                      fill="url(#paint9_linear_92_1205)"/>
+                <path d="M30.2505 131.49L56.8657 80.1159L25.7764 69.7998L30.2505 131.49Z"
+                      fill="url(#paint10_linear_92_1205)"/>
+                <path d="M77.0333 171.938L87.3422 140.848L30.2511 131.49L77.0333 171.938Z"
+                      fill="url(#paint11_linear_92_1205)"/>
+                <path d="M138.715 167.47L87.3417 140.848L77.0329 171.938L138.715 167.47Z"
+                      fill="url(#paint12_linear_92_1205)"/>
+                <path d="M179.17 120.689L148.073 110.372L138.715 167.47L179.17 120.689Z"
+                      fill="url(#paint13_linear_92_1205)"/>
+                <path d="M174.694 59.0061L148.073 110.372L179.17 120.689L174.694 59.0061Z"
+                      fill="url(#paint14_linear_92_1205)"/>
+                <path d="M127.913 18.5508L117.597 49.6401L174.694 59.0061L127.913 18.5508Z"
+                      fill="url(#paint15_linear_92_1205)"/>
+                <path d="M148.073 110.372L174.694 59.0062L117.598 49.6402L66.2304 23.0264L56.8659 80.1159L30.2506 131.49L87.3416 140.848L138.715 167.47L148.073 110.372Z"
+                      stroke="url(#paint16_linear_92_1205)" stroke-width="2" stroke-miterlimit="10"/>
+                <path d="M25.7764 69.7998L56.8657 80.1159" stroke="url(#paint17_linear_92_1205)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path d="M179.17 120.689L148.073 110.372" stroke="url(#paint18_linear_92_1205)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path d="M30.2511 131.49L59.5254 116.797" stroke="url(#paint19_linear_92_1205)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path d="M124.023 138.189L138.715 167.47" stroke="url(#paint20_linear_92_1205)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path opacity="0.42"
+                      d="M103.111 195.305C149.092 192.995 185.929 182.41 185.389 171.664C184.849 160.918 147.136 154.079 101.155 156.389C55.1744 158.699 18.3371 169.284 18.877 180.03C19.4169 190.776 57.1296 197.615 103.111 195.305Z"
+                      fill="url(#paint21_radial_92_1205)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_92_1205" x1="80.5998" y1="87.542" x2="15.1906" y2="119.787"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_92_1205" x1="63.9812" y1="100.666" x2="71.457" y2="48.2521"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C116FF"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_92_1205" x1="110.357" y1="83.6153" x2="86.056" y2="21.3091"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0F0F0F"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_92_1205" x1="116.02" y1="57.5305" x2="172.714" y2="68.8866"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#822FA0"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_92_1205" x1="124.428" y1="115.439" x2="171.627" y2="65.9425"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#822FA0"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint5_linear_92_1205" x1="129.437" y1="95.0316" x2="148.402" y2="178.943"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint6_linear_92_1205" x1="32.2295" y1="121.605" x2="88.9239" y2="132.961"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FA9CD2"/>
+                        <stop offset="0.5558" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#A644A5"/>
+                    </linearGradient>
+                    <linearGradient id="paint7_linear_92_1205" x1="86.7344" y1="143.888" x2="141.248" y2="154.808"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint8_linear_92_1205" x1="134.229" y1="58.1043" x2="82.216" y2="5.86642"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint9_linear_92_1205" x1="36.0156" y1="24.0629" x2="60.7351" y2="79.3754"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint10_linear_92_1205" x1="8.10276" y1="110.807" x2="48.5112" y2="90.1821"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#87EF20"/>
+                        <stop offset="0.2008" stop-color="#FFB801"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint11_linear_92_1205" x1="26.0586" y1="169.92" x2="76.5496" y2="136.59"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#822FA0"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint12_linear_92_1205" x1="105.877" y1="189.98" x2="110.25" y2="145.51"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#822FA0"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint13_linear_92_1205" x1="171.077" y1="165.863" x2="141.058" y2="111.985"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#822FA0"/>
+                        <stop offset="0.2008" stop-color="#8B34A1"/>
+                        <stop offset="0.5278" stop-color="#A343A5"/>
+                        <stop offset="0.9382" stop-color="#CA5AAB"/>
+                        <stop offset="1" stop-color="#D15EAC"/>
+                    </linearGradient>
+                    <linearGradient id="paint14_linear_92_1205" x1="189.173" y1="82.4912" x2="151.022" y2="105.412"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint15_linear_92_1205" x1="120.793" y1="33.7033" x2="177.487" y2="45.0595"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A644A5"/>
+                        <stop offset="0.4442" stop-color="#C969B8"/>
+                        <stop offset="1" stop-color="#FA9CD2"/>
+                    </linearGradient>
+                    <linearGradient id="paint16_linear_92_1205" x1="39.0394" y1="82.5399" x2="165.904" y2="107.952"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                        <stop offset="0.5034" stop-color="white"/>
+                        <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint17_linear_92_1205" x1="25.2945" y1="71.7497" x2="57.3508" y2="78.1707"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                        <stop offset="0.5034" stop-color="white"/>
+                        <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint18_linear_92_1205" x1="147.592" y1="112.321" x2="179.649" y2="118.742"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                        <stop offset="0.5034" stop-color="white"/>
+                        <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint19_linear_92_1205" x1="31.7824" y1="121.515" x2="57.9963" y2="126.766"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                        <stop offset="0.5034" stop-color="white"/>
+                        <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint20_linear_92_1205" x1="120.913" y1="150.734" x2="141.822" y2="154.923"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                        <stop offset="0.5034" stop-color="white"/>
+                        <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <radialGradient id="paint21_radial_92_1205" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(106.593 176.798) rotate(-2.66924) scale(75.5027 8.81848)">
+                        <stop/>
+                        <stop offset="0.9374" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+            <div class="services-items-wrapper display-grid mt-13 gap-25 w-100"> <!-- Services Div -->
+                <div class="question-grid">
+                    {% for question in questions %}
+                        {% if forloop.counter <= 6 %}
+                            <div class="question-item">
+                                {% include 'partials/_questionindex.html' %}
+                            </div>
+                            {% if forloop.counter|divisibleby:1 and not forloop.last %}
+                            </div><div class="question-grid">
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services section end here-->
+    <!-- Practice section start here-->
+    <section id="practice" class="practice-container p-23-5 display-flex p-r bg-main">
+        <svg xmlns="http://www.w3.org/2000/svg" class="practice-shape-top p-a" width="190" height="269"
+             viewBox="0 0 190 269" fill="none">
+            <g clip-path="url(#clip0_92_1191)">
+                <path d="M128.342 128.205L157.728 102.77L152.075 64.3001L182.779 37.7082C184.097 36.5514 186.098 36.7094 187.255 38.0275C188.413 39.3456 188.256 41.345 186.938 42.5018L158.856 66.8183L164.508 105.288L135.123 130.723L140.775 169.193L111.382 194.647L117.035 233.116L86.3309 259.708C85.0127 260.865 83.0124 260.707 81.8547 259.389C80.6971 258.071 80.8544 256.071 82.1726 254.915L110.254 230.598L104.602 192.129L133.995 166.674L128.342 128.205Z"
+                      fill="#FFC436"/>
+                <path d="M102.058 118.443L131.444 93.0081L125.791 54.5385L156.514 27.9537C157.832 26.7969 159.833 26.955 160.99 28.273C162.148 29.5911 161.991 31.5905 160.672 32.7473L132.591 57.0638L138.243 95.5334L108.857 120.969L114.51 159.438L85.1172 184.892L90.7699 223.362L60.0658 249.954C58.7476 251.111 56.7473 250.953 55.5896 249.634C54.4319 248.316 54.5893 246.317 55.9075 245.16L83.9894 220.844L78.3366 182.374L107.73 156.92L102.058 118.443Z"
+                      fill="#FFC436"/>
+                <path d="M75.7931 108.689L105.179 83.2536L99.5263 44.784L130.23 18.1921C131.549 17.0354 133.549 17.1934 134.707 18.5115C135.864 19.8296 135.707 21.829 134.389 22.9857L106.307 47.3022L111.96 85.7718L82.5737 111.207L88.2265 149.677L58.8335 175.131L64.4863 213.6L33.7821 240.192C32.4639 241.349 30.4636 241.191 29.3059 239.873C28.1482 238.555 28.3056 236.555 29.6238 235.399L57.7057 211.082L52.0529 172.613L81.4459 147.158L75.7931 108.689Z"
+                      fill="#FFC436"/>
+                <path d="M49.5275 98.9345L78.9134 73.4993L73.2607 35.0297L103.965 8.43782C105.283 7.28108 107.283 7.43909 108.441 8.75717C109.599 10.0753 109.441 12.0747 108.123 13.2314L80.0413 37.5479L85.694 76.0175L56.3081 101.453L61.9609 139.922L32.5679 165.376L38.2206 203.846L7.5165 230.438C6.19829 231.595 4.19798 231.437 3.0403 230.119C1.88262 228.801 2.03998 226.801 3.35819 225.644L31.433 201.347L25.7873 162.858L55.1803 137.404L49.5275 98.9345Z"
+                      fill="#FFC436"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_92_1191">
+                    <rect width="110" height="245" fill="white"
+                          transform="translate(86.2334 0.0979919) rotate(20.3742)"/>
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="practice-content-wrapper w-100 display-flex flex-col  justify-center align-center" role="div" aria-label="Interviewer feature information section" tabindex="0">
+            <h1 class="fs-48 fw-600 txt-white" tabindex="0">Why should you <span class="txt-yellow">make practice ?</span></h1>
+
+            <div class="practice-items display-flex gap-2 flex-col justify-center align-center p-r w-100">
+                <div class="practice-list-item-wrapper bg-main w-100 display-grid mt-30">
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">
+                                Real-World</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">One of the fundamental elements of success in the business world is real-world experience. While theoretical knowledge is important, practical application and field experience are the most effective ways to enhance your skills. </p>
+                    </div>
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">Anywhere with
+                                Internet</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">
+                            Today's business world is influenced by digitization. Internet access is not only key to accessing information related to your work but also facilitates remote work and digital communication collaboration.</p>
+                    </div>
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">General
+                                Skills</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">Possessing general skills is crucial for success in the business world. Skills such as communication, problem-solving, leadership, and time management are valuable in every industry. </p>
+                    </div>
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">Sectoral
+                                Diversity</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">The business world spans a wide range of industries, and gaining experience in different sectors can help diversify your career. </p>
+                    </div>
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">Career
+                                Plan</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">Having a career plan is important for a successful career. Setting short-term, medium-term, and long-term goals helps you understand which skills you need to develop.</p>
+                    </div>
+                    <div tabindex="0" class="practice-list-item  pb-8 pt-8 ">
+                        <div class="practice-list-item-heading display-flex align-center">
+                            <span></span>
+                            <h3 class="display-inline txt-white fw-500 fs-18" style="white-space: nowrap">Interview
+                                Strategies</h3>
+                        </div>
+                        <p class="fs-14 fw-lighter line-height-7 mt-5 txt-white">Job interviews are crucial steps that shape your career. Learning interview strategies to express yourself effectively, provide logical answers to questions, and emphasize your suitability for the job is essential.</p>
+                    </div>
+                </div>
+                <button role="button" tabindex="0" aria-label="Go to Interview Test Page" class="btn  display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center mt-12">
+                    Interview
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="storyset display-flex">
+                </div>
+                <h1 class="fs-44 fw-500 line-height-17 text-center txt-white" tabindex="0">
+                    One of the secrets of success is not to<br>
+                    let temporary failures defeat us.
+                </h1>
+            </div>
+        </div>
+        <svg width="220" height="240" class="practice-shape p-a" viewBox="0 0 220 240" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_92_1171)">
+                <path opacity="0.42"
+                      d="M114.47 246.48C176.597 246.48 226.96 234.709 226.96 220.19C226.96 205.67 176.597 193.9 114.47 193.9C52.344 193.9 1.98047 205.67 1.98047 220.19C1.98047 234.709 52.344 246.48 114.47 246.48Z"
+                      fill="url(#paint0_radial_92_1171)"/>
+                <path d="M123.17 221.37L171.03 120.62L115.48 178.45L123.17 221.37Z" fill="url(#paint1_linear_92_1171)"/>
+                <path d="M18.6904 26.1299L54.2604 64.0499L43.3104 143.49L18.6904 26.1299Z"
+                      fill="url(#paint2_linear_92_1171)"/>
+                <path d="M133.2 49.91L153.41 2L54.2598 64.05L133.2 49.91Z" fill="url(#paint3_linear_92_1171)"/>
+                <path d="M171.03 120.62L153.41 2L133.2 49.91L171.03 120.62Z" fill="url(#paint4_linear_92_1171)"/>
+                <path d="M171.03 120.62L217.97 122.67L123.17 221.37L171.03 120.62Z" fill="url(#paint5_linear_92_1171)"/>
+                <path d="M153.41 2L171.03 120.62L217.97 122.67L153.41 2Z" fill="url(#paint6_linear_92_1171)"/>
+                <path d="M54.2604 64.05L153.41 2L18.6904 26.13L54.2604 64.05Z" fill="url(#paint7_linear_92_1171)"/>
+                <path d="M0 161.7L43.31 143.49L18.69 26.1299L0 161.7Z" fill="url(#paint8_linear_92_1171)"/>
+                <path d="M123.17 221.37L43.3096 143.49L115.48 178.45L123.17 221.37Z"
+                      fill="url(#paint9_linear_92_1171)"/>
+                <path d="M123.17 221.37L43.31 143.49L0 161.7L123.17 221.37Z" fill="url(#paint10_linear_92_1171)"/>
+                <path d="M18.6904 26.1299L133.2 49.9099L54.2604 64.0499L18.6904 26.1299Z"
+                      fill="url(#paint11_linear_92_1171)"/>
+                <path d="M171.03 120.62L123.17 221.37L43.3104 143.49L18.6904 26.13L92.4604 39.87L153.41 2L171.03 120.62Z"
+                      stroke="url(#paint12_linear_92_1171)" stroke-width="2" stroke-miterlimit="10"/>
+                <path d="M171.03 120.62L153.41 2" stroke="url(#paint13_linear_92_1171)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path d="M43.3104 143.49L18.6904 26.1299" stroke="url(#paint14_linear_92_1171)" stroke-width="2"
+                      stroke-miterlimit="10"/>
+                <path opacity="0.13"
+                      d="M112.94 246.99C175.067 246.99 225.43 235.219 225.43 220.7C225.43 206.18 175.067 194.41 112.94 194.41C50.8137 194.41 0.450195 206.18 0.450195 220.7C0.450195 235.219 50.8137 246.99 112.94 246.99Z"
+                      fill="url(#paint15_radial_92_1171)"/>
+            </g>
+            <defs>
+                <radialGradient id="paint0_radial_92_1171" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(120.417 221.774) rotate(0.207004) scale(101.886 11.8999)">
+                    <stop/>
+                    <stop offset="0.9374" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="paint1_linear_92_1171" x1="151.57" y1="115.82" x2="125.406" y2="221.922"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_92_1171" x1="43.9355" y1="32.3523" x2="18.0656" y2="137.262"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_92_1171" x1="165.235" y1="38.4066" x2="78.6834" y2="30.8194"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear_92_1171" x1="135.411" y1="-29.1338" x2="152.97" y2="91.127"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint5_linear_92_1171" x1="184.759" y1="114.477" x2="156.381" y2="229.56"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFCE00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint6_linear_92_1171" x1="197.865" y1="12.9659" x2="171.302" y2="120.686"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFCE00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint7_linear_92_1171" x1="83.9542" y1="2.38124" x2="92.9399" y2="52.5489"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFCE00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint8_linear_92_1171" x1="43.9351" y1="32.3523" x2="11.3493" y2="164.496"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFCE00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint9_linear_92_1171" x1="90.0034" y1="155.001" x2="76.4766" y2="209.856"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint10_linear_92_1171" x1="71.7044" y1="150.489" x2="58.1776" y2="205.344"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFCE00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint11_linear_92_1171" x1="50.9408" y1="80.8515" x2="84.2637" y2="23.7607"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F15A00"/>
+                    <stop offset="1" stop-color="#F7941E"/>
+                </linearGradient>
+                <linearGradient id="paint12_linear_92_1171" x1="173.021" y1="105.58" x2="36.2447" y2="130.079"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                    <stop offset="0.5034" stop-color="white"/>
+                    <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint13_linear_92_1171" x1="164.958" y1="60.8208" x2="159.482" y2="61.8016"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                    <stop offset="0.5034" stop-color="white"/>
+                    <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint14_linear_92_1171" x1="33.7324" y1="84.3177" x2="28.2687" y2="85.2963"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0103" stop-color="white" stop-opacity="0"/>
+                    <stop offset="0.5034" stop-color="white"/>
+                    <stop offset="0.9517" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                <radialGradient id="paint15_radial_92_1171" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(122.409 222.282) scale(92.2518 7.83868)">
+                    <stop/>
+                    <stop offset="0.8697" stop-opacity="0"/>
+                </radialGradient>
+                <clipPath id="clip0_92_1171">
+                    <rect width="226.96" height="248.99" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </section>
+    <!-- Practice section end here-->
+
+    <!-- FAQ  section start here-->
+    <section id="faq" class="faq-container p-23-5 p-r display-flex bg-secondary">
+        <div class="faq-wrapper display-flex flex-col justify-center align-center w-100" role="div" tabindex="0" aria-label="FAQ Section">
+            <h3 class="fs-24 fw-600 txt-blue-900 text-center" tabindex="0">What is on your mind ?</h3>
+            <div class="heading-icon mt-4 display-flex justify-center align-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="122" height="121" viewBox="0 0 122 121" fill="none">
+                    <path d="M60.9997 10.0833C68.4727 10.0757 75.8535 11.7328 82.606 14.9342C89.3585 18.1356 95.3131 22.8009 100.037 28.5912L68.1286 60.4999L100.037 92.4087C95.3131 98.199 89.3585 102.864 82.606 106.066C75.8535 109.267 68.4727 110.924 60.9997 110.917C33.1546 110.917 10.583 88.3451 10.583 60.4999C10.583 32.6548 33.1546 10.0833 60.9997 10.0833ZM60.9997 25.2083C58.994 25.2083 57.0704 26.005 55.6522 27.4233C54.2339 28.8415 53.4372 30.7651 53.4372 32.7708C53.4372 34.7765 54.2339 36.7 55.6522 38.1183C57.0704 39.5365 58.994 40.3333 60.9997 40.3333C63.0054 40.3333 64.9289 39.5365 66.3472 38.1183C67.7654 36.7 68.5622 34.7765 68.5622 32.7708C68.5622 30.7651 67.7654 28.8415 66.3472 27.4233C64.9289 26.005 63.0054 25.2083 60.9997 25.2083Z"
+                          fill="#FFC436"/>
+                </svg>
+                <span class="fs-44 fw-500 txt-blue-400" tabindex="0">Question and Answers</span>
+            </div>
+            <div class="question-wrapper display-flex flex-col justify-center align-center">
+                <div class="accordion">
+                    <div  class="accordion-item pt-7 pb-7 ">
+                        <button id="accordion-button" aria-expanded="false" tabindex="0"
+                                class="accordion-btn display-flex p-r display-block justify-between pt-5 pb-5 w-100 border-none outline bg-secondary">
+                            <span  class="accordion-title fs-18 txt-text-color">Why is it important to use the Interviewer project?</span>
+                            <span class="accordion-icon display-inline-block  p-a right-0 width-6 height-6 radius-6"
+                                  aria-hidden="true"  role="button" tabindex="0" aria-label="Open the question detail"></span>
+                        </button>
+                        <div class="accordion-content" tabindex="0">
+                            <p class="fs-16 txt-text-color line-height-7">
+                                Interviewer provides users with a broad perspective by incorporating interviews and
+                                tests from different sectors, focusing on their career development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item pt-7 pb-7 ">
+                        <button tabindex="0" id="accordion-button" aria-expanded="false"
+                                class="accordion-btn display-flex p-r display-block justify-between pt-5 pb-5 w-100 border-none outline bg-secondary">
+                            <span class="accordion-title fs-18 txt-text-color" >Which sectors have specific tests in the project?</span>
+                            <span class="accordion-icon display-inline-block  p-a right-0 width-6 height-6 radius-6"
+                                  aria-hidden="true" tabindex="0"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="fs-16 txt-text-color line-height-8" tabindex="0">
+                                We include sector-specific tests and interview questions for various fields such as
+                                engineering, health, communication, and education.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item pt-7 pb-7 ">
+                        <button id="accordion-button" aria-expanded="false" tabindex="0"
+                                class="accordion-btn display-flex p-r display-block justify-between pt-5 pb-5 w-100 border-none outline bg-secondary">
+                            <span class="accordion-title fs-18 txt-text-color">What skills does Interviewer measure?</span>
+                            <span class="accordion-icon display-inline-block  p-a right-0 width-6 height-6 radius-6"
+                                  aria-hidden="true" tabindex="0"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="fs-16 txt-text-color line-height-8" tabindex="0">
+                                Interviewer is used to measure both general and sector-specific skills, including
+                                intellectual abilities, mathematical skills, social skills, attention, and focus.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item pt-7 pb-7 ">
+                        <button id="accordion-button" aria-expanded="false" tabindex="0"
+                                class="accordion-btn display-flex p-r display-block justify-between pt-5 pb-5 w-100 border-none outline bg-secondary">
+                            <span class="accordion-title fs-18 txt-text-color" >How can users use your system?</span>
+                            <span class="accordion-icon display-inline-block  p-a right-0 width-6 height-6 radius-6"
+                                  aria-hidden="true" tabindex="0"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="fs-16 txt-text-color line-height-8" tabindex="0">
+                                Users can access various tests and interview strategies through the online platform to
+                                improve themselves and prepare for the recruitment processes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item pt-7 pb-7 ">
+                        <button id="accordion-button" aria-expanded="false" tabindex="0"
+                                class="accordion-btn display-flex p-r display-block justify-between pt-5 pb-5 w-100 border-none outline bg-secondary">
+                            <span class="accordion-title fs-18 txt-text-color">What are the advantages of Interviewer?</span>
+                            <span class="accordion-icon display-inline-block  p-a right-0 width-6 height-6 radius-6"
+                                  aria-hidden="true" tabindex="0"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="fs-16 txt-text-color line-height-8" tabindex="0">
+                                Interviewer offers users an effective career development tool with its wide range of
+                                content, sector-specific tests, realistic interview experiences, and continuously
+                                updated materials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ section end here-->
+
+    <!-- Pricing  section start here-->
+    <section id="pricing" class="pricing-container p-23-5 display-flex bg-secondary">
+        <div class="pricing-container display-flex justify-center align-center flex-col w-100 gap-18 " role="div" tabindex="0" aria-label="Interviewer Pricing plan section">
+            <div class="pricing-text text-center">
+                <h3 class="fs-24 txt-blue-900 fw-600" tabindex="0">Our Pricing Plan</h3>
+                <p class="fs-16 text-center line-height-6 txt-text-color mt-6" tabindex="0">
+                    Save time, enhance your preparation, and increase your chances <br>
+                    of success in recruitment interviews with Interviewer. What<br>
+                    are you waiting for, choose a plan.
+                </p>
+            </div>
+            <div class="pricing-plan-wrapper display-flex w-100 justify-between flex-wrap">
+                <div tabindex="0" class="plan-item justify-between w-100 display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3 class="fs-24 fw-500 txt-white">Free Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>0<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Get started with essential interview questions and
+                            tips.</p>
+                    </div>
+                    <div class="plan-list mt-9 display-flex h-100 ">
+                        <ul class="list-none display-flex flex-col gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Access essential interview questions.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Basic recommendation system.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive notifications for upcoming webinars.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <a id="priceOpenModal" role="button" tabindex="0"
+                       class="price-button text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-10 border-none outline txt-white bg-yellow cursor-pointer">
+                        Get Started
+                    </a>
+                </div>
+                <div tabindex="0" class="plan-item w-100 justify-between display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3 class="fs-24 fw-500 txt-white">Basic Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>99<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Upgrade for a broader selection of questions, tests and
+                            increased limits.</p>
+                    </div>
+                    <div class="plan-list mt-9 display-flex h-100">
+                        <ul class="list-none display-flex flex-col  gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Upgrade for a broader selection of questions.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Enhanced recommendation system.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive notifications for upcoming webinars and industry events.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Access interactive test taking. and industry events.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <a id="priceOpenModalbasic" tabindex="0" role="button"
+                       class="price-button text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-10 border-none outline txt-white bg-yellow cursor-pointer">
+                        Get Started
+                    </a>
+                </div>
+                <div  tabindex="0" class="plan-item w-100 justify-between display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3 class="fs-24 fw-500 txt-white">Premium Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>199<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Unlock unlimited access and exclusive features for
+                            serious job seekers.</p>
+                    </div>
+
+                    <div class="plan-list mt-9 display-flex h-100">
+                        <ul class="list-none display-flex flex-col  gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Priority access to expertly curatedquestions uploaded by professionals.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Advanced recommendation system.</span>
+                            </li>
+
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive exclusive industry insights and trend analyses. and industry events.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+
+                                <span class="ml-4 fs-13 fw-400">Access interactive test taking and view explained answers. and industry events.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <a id="priceOpenModalpremium"  tabindex="0" role="button"
+                       class="price-button text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-10 border-none outline txt-white bg-yellow cursor-pointer">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing modal start here  when user click button  -->
+    <div id="pricing-modal"
+         class="modal display-none p-f justify-center align-center left-0 top-0 w-100 p-23-5 z-index-1"
+         style="background-color: rgba(0,0,0,0.4)">
+        <div  class="modal-content display-grid bg-white radius-5 p-r" id="pricing-premium">
+            <span class="p-a right-0 pr-5 pt-5 cursor-pointer" id="close-pricing-modal"><i
+                    class="fa fa-close fs-24" role="button" tabindex="0" aria-label="Close modal"></i> </span>
+            <div tabindex="0" class="model-left-pricing p-4 h-100">
+                <div class="plan-item justify-between display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900 h-100">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3 class="fs-24 fw-500 txt-white">Free Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>0<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Get started with essential interview questions and
+                            tips.</p>
+                    </div>
+                    <div class="plan-list mt-9 display-flex h-100 ">
+                        <ul class="list-none display-flex flex-col gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Access essential interview questions.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Basic recommendation system.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive notifications for upcoming webinars.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div tabindex="0" class="model-right-features display-flex justify-between flex-col bg-white radius-5 p-4">
+                <h3 tabindex="0" class="fs-24 pt-4 pb-4">More Features</h3>
+                <ul class="display-flex flex-col gap-8 list-none">
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400"> Community and Forums</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">Category-Based Questions</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">  Category-Based Questions</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">Question Bank</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">   Interview Preparation Challenges and Quizzes</span>
+                    </li>
+
+
+                </ul>
+                <a id="priceOpenModal" href="{% url 'register' %}" tabindex="0" role="button"
+                   class="price-button price-modal-buton text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-7 border-none outline txt-white bg-yellow cursor-pointer">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="pricing-modal-basic"
+         class="modal display-none p-f justify-center align-center left-0 top-0 w-100 p-23-5 z-index-1"
+         style="background-color: rgba(0,0,0,0.4)">
+        <div class="modal-content display-grid bg-white radius-5 p-r">
+            <span class="p-a right-0 pr-5 pt-5 cursor-pointer" id="close-pricing-modal-basic"><i
+                    class="fa fa-close fs-24"></i> </span>
+            <div tabindex="0" class="model-left-pricing p-4 h-100">
+                <div class="plan-item justify-between display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900 h-100">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3  class="fs-24 fw-500 txt-white">Basic Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>99<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Upgrade for a broader selection of questions, tests and
+                            increased limits.</p>
+                    </div>
+                    <div class="plan-list mt-9 display-flex h-100">
+                        <ul class="list-none display-flex flex-col  gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Upgrade for a broader selection of questions.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Enhanced recommendation system.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive notifications for upcoming webinars and industry events.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Access interactive test taking. and industry events.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="model-right-features display-flex justify-between flex-col bg-white radius-5 p-4">
+                <h3 tabindex="0" class="fs-24 pt-4 pb-4">More Features</h3>
+                <ul class="display-flex flex-col gap-8 list-none">
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400"> AI-Powered Interview Analysis.</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">Interview Simulation Challenges</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">  Live Q&A Sessions
+</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">Interview Scheduler</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">   Interview Preparation Challenges and Quizzes</span>
+                    </li>
+
+
+                </ul>
+                <a id="priceOpenModal" href="{% url 'register' %}" tabindex="0" role="button"
+                   class="price-button price-modal-buton text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-7 border-none outline txt-white bg-yellow cursor-pointer">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="pricing-modal-premium"
+         class="modal display-none p-f justify-center align-center left-0 top-0 w-100 p-23-5 z-index-1"
+         style="background-color: rgba(0,0,0,0.4)">
+        <div class="modal-content display-grid  bg-white radius-5 p-r">
+            <span class="p-a right-0 pr-5 pt-5 cursor-pointer" id="close-pricing-modal-premium"><i
+                    class="fa fa-close fs-24"></i> </span>
+            <div class="model-left-pricing p-4 h-100">
+                <div class="plan-item justify-between display-flex flex-col pb-5 pt-5 pr-10 pl-10 radius-5 bg-blue-900 h-100">
+                    <div class="plan-heading display-flex flex-col">
+                        <h3 class="fs-24 fw-500 txt-white">Premium Plan</h3>
+                        <div>
+                            <h3 class="fs-52 txt-white display-flex align-center gap-2">
+                                <span>₺</span>199<span class="fs-12 fw-lighter">per month</span>
+                            </h3>
+                        </div>
+                        <p class="txt-white fs-16 fw-400 mt-6 ">Unlock unlimited access and exclusive features for
+                            serious job seekers.</p>
+                    </div>
+
+                    <div class="plan-list mt-9 display-flex h-100">
+                        <ul class="list-none display-flex flex-col  gap-5 txt-white">
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Priority access to expertly curatedquestions uploaded by professionals.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Advanced recommendation system.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+                                <span class="ml-4 fs-13 fw-400">Receive exclusive industry insights and trend analyses. and industry events.</span>
+                            </li>
+                            <li class="display-flex align-center">
+                                <i class="fa-solid fa-check fs-24"></i>
+
+                                <span class="ml-4 fs-13 fw-400">Access interactive test taking and view explained answers. and industry events.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="model-right-features display-flex justify-between flex-col bg-white radius-5 p-4">
+                <h3 tabindex="0" class="fs-24 pt-4 pb-4">More Features</h3>
+                <ul  class="display-flex flex-col gap-8 list-none">
+                    <li  tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400"> AI-Powered Interview Analysis.</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">Interview Simulation Challenges</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">  Integration with Job Portals</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">   Community Challenges and Contests</span>
+                    </li>
+                    <li tabindex="0" class="pricing-modal-list-item pb-4">
+                        <i class="fa-solid fa-check fs-24"></i>
+                        <span class="ml-4 fs-16 fw-400">   Interview Preparation Challenges and Quizzes</span>
+                    </li>
+
+
+                </ul>
+                <a id="priceOpenModal" href="{% url 'register' %}" tabindex="0" role="button"
+                   class="price-button price-modal-buton text-decoration-none text-center pt-2-5 pb-2-5 pr-6 pl-6 fs-18 radius-2-5 mt-7 border-none outline txt-white bg-yellow cursor-pointer">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing modal  end here when user click button  -->
+
+
+
+
+
+    <!-- Pricing  section end here-->
+    <!-- Sponsor  section start here-->
+    <section id="sponsor" class="sponsor-container p-23-5 display-flex bg-main">
+        <div class="sponsor-wrapper display-flex justify-center align-center flex-col w-100" role="div" tabindex="0" aria-label="Sponsor section. You can find here our sponsor">
+            <h3 tabindex="0" class="txt-white text-center fs-24 fw-500">Sponsored by</h3>
+            <p tabindex="0" class="txt-white fs-16 line-height-9 text-center mt-4">
+                Prepare yourself for interviews with the latest and different<br>
+                questions asked by companies one-on-one.</p>
+            <div class="sponsor-item-wrapper  display-flex  align-center  flex-wrap justify-between w-100">
+                <div  class="sponsor-item p-10 cursor-pointer ">
+                    <h3 tabindex="0" class="txt-white fs-14">KARİYER.NET</h3>
+                </div>
+                <div class="sponsor-item p-10 cursor-pointer">
+                    <h3 tabindex="0" class="txt-white fs-14">VİZYON KARİYER AKADEMİ</h3>
+                </div>
+                <div class="sponsor-item p-10 cursor-pointer">
+                    <h3 tabindex="0" class="txt-white fs-14">SİSTEM GLOBAL DANIŞMANLIK</h3>
+                </div>
+                <div class="sponsor-item p-10 cursor-pointer">
+                    <h3 tabindex="0" class="txt-white fs-14">EDUPRO KARİYER</h3>
+                </div>
+                <div class="sponsor-item p-10 cursor-pointer">
+                    <h3 tabindex="0" class="txt-white fs-14">INNOVATE GLOBAL SOLUTIONS</h3>
+                </div>
+            </div>
+            <button tabindex="0" role="button" class="btn contact-button display-flex pr-6 pl-6 pt-3 pb-3 fs-18  mt-15 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center">
+                Be Our Sponsor
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+    <!-- Sponsor  section end here-->
+
+
+
+
+
+
+
+
+{% endblock content %}

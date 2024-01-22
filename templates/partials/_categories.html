@@ -1,0 +1,26 @@
+
+
+{% load static %}
+ <ul class="categories-list display-flex  flex-col list-none gap-9 w-100">
+    {% for category in categories %}
+        <li class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100 display-flex gap-3">
+
+        <img src="{{ category.icon.url }}" alt="">
+            {% if category.slug == selected_category %}
+                <a href="{% url 'questions_by_category' category.slug %}" tabindex="0"
+                   class="categories-list-link display-flex justify-start align-center fs-14 gap-2 text-decoration-none txt-text-color ">
+                    <h3 class="fw-400 fs-16">
+                        {{ category.name|title }}
+                    </h3>
+                </a>
+            {% else %}
+                <a class="categories-list-link display-flex justify-start align-center fs-14 gap-2 text-decoration-none txt-text-color"
+                  tabindex="0" href="{% url 'questions_by_category' category.slug %}">
+                    <h3 class="fw-400 fs-16">
+                        {{ category.name|title }}
+                    </h3>
+                </a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

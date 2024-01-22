@@ -1,0 +1,84 @@
+{%  load static %}
+
+<header class="header w-100 top-0  display-flex  align-center pr-23-5 pl-23-5 pt-2-5 pb-2-5 bg-main p-f" id="header" >
+    <div class="header-inside display-flex w-100 justify-between align-center" role="header" aria-label="Interviewer App Header Section. In this area you can find app logo and navigation bar." tabindex="0">
+        <div class="logo fs-36 p-r txt-white fw-bold" role="logo" tabindex="0" aria-label="Interviewer Logo">
+            <a href="http://127.0.0.1:8000/#home" class=" gap-2 txt-white text-decoration-none display-flex justify-center align-center" aria-labelledby="Interviewer Logo" >
+            <img src="{% static 'images/logo.svg' %}" alt="" style="width: 34px; height: auto">
+            INTERVIEWER
+        </a></div>
+        <nav class="navbar display-flex p-r  gap-14 align-center" >
+
+            <ul class="navbar-list display-flex gap-8-5 align-center mainMenu" role="navigation" tabindex="0" aria-label="Interviewer Navigation Bar">
+                <li class=""><a href="http://127.0.0.1:8000/#home"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Home</a>
+                </li>
+                <li class=""><a href="http://127.0.0.1:8000/#about"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">About
+                    Us</a></li>
+                <li class=""><a href="http://127.0.0.1:8000/#services"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Services</a>
+                </li>
+                <li class=""><a href="http://127.0.0.1:8000/questions"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Interview</a>
+                </li>
+                <li class=""><a href="http://127.0.0.1:8000/#faq"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">FAQ</a>
+                </li>
+                <li class=""><a href="#footer"
+                                class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Contact</a>
+                </li>
+                <li class="" role="search-icon" aria-label="Search Icon" tabindex="0">
+                    <a href=""
+                       class="nav-link nav-link-ltr display-inline-block text-decoration-none txt-white fs-24 p-r"><i
+                            class="fa fa-search"></i></a>
+                </li>
+
+                    <div class="signed-area display-flex gap-2 align-center justify-center" tabindex="0" role="user-information" aria-label="Navbar user login area">
+                        {% if user.is_authenticated %}
+                            <div class="user-header-image radius  width-12 height-12"  tabindex="0" role="user-photo" aria-label="Navbar user login profil photo"
+                                 style="background-image: url({{ user.profile.image.url }});">
+                            </div>
+                            <ul class="list-none display-flex align-center justify-center gap-2">
+                                <li role="user-name" tabindex="0" aria-label="Navbar user login name">
+                                    <a class="text-decoration-none user-hamburger-name txt-white fw-500 fs-16"
+                                       href="{% url 'profile' %}">{{ user.get_full_name|title }}</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-angle-down dropbtn txt-white cursor-pointer"
+                                       onclick="userSettings()" role="icon" tabindex="0" aria-label="User info angle down. When you click this icon, there will open a dropdown. "></i>
+                                    <div id="myDropdown" role="dropdown-navigation" tabindex="0" aria-label="User login dropdown. You can reach from here menus. "
+                                         class="dropdown-content bg-secondary display-none mt-7 radius-2 p-2 p-a z-index-1">
+                                        <a href="{% url 'profile' %}"
+                                           class="txt-text-color pt-3 pb-3 pr-4 pl-4 text-decoration-none display-block">Profile</a>
+                                        <a href="{% url 'profile_update' %}"
+                                           class="txt-text-color pt-3 pb-3 pr-4 pl-4 text-decoration-none display-block">Settings</a>
+                                        <a href="{% url 'logout' %}"
+                                           class="txt-text-color pt-3 pb-3 pr-4 pl-4 text-decoration-none display-block">Log
+                                            out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        {% else %}
+                            <a href="{% url 'login' %}" role="0" tabindex="0" aria-label="Interviewer Login Button"
+                               class="btn p-2-5 fs-18 cursor-pointer radius-2-5 border-none  bg-white text-decoration-none txt-text-color ">Sign
+                                In</a>
+
+
+                            <a href="{% url 'register' %}" role="0" tabindex="0" aria-label="Interviewer Register Button"
+                               class="txt-text-color btn p-2-5 text-decoration-none txt-text-colo fs-18 cursor-pointer radius-2-5 border-none outline bg-white">Sign
+                                Up</a>
+
+
+                            </div>
+                        {% endif %}
+
+
+                <i class="fa fa-times closeMenu" role="0" tabindex="0" aria-label="Close Hamburger menu"></i>
+            </ul>
+        </nav>
+        <i class="fa fa-bars openMenu" role="0" tabindex="0" aria-label="Open Hamburger menu"></i>
+
+    </div>
+
+</header>

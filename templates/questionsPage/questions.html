@@ -1,0 +1,50 @@
+{% extends "product-base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- Ali Şahin -->
+
+         <div class="search-bar display-flex align-center justify-between" tabindex="0" role="search" aria-label="Search bar">
+             <form action="{% url 'search_questions' %}" method="get">
+                {% csrf_token %}
+                <input type="search" name="q" id="searchbar"
+                   class="pl-2 pb-3 pt-3 pr-2 radius-2-5 outline border-none width-75" placeholder="Search Question">
+                <button type="submit" style="height:39px;width:70px">Search</button>
+             </form>
+
+            <div class=" p-2 radius-2-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 17 20" fill="none">
+                    <path d="M8.5 3L16.5 3M0.5 17H3.5M0.5 3H4.5M7.5 17H16.5M13.5 10H16.5M0.5 10H9.5"
+                          stroke="#212121" stroke-linecap="round"></path>
+                    <path d="M4.5 3C4.5 4.10457 5.39543 5 6.5 5C7.60457 5 8.5 4.10457 8.5 3C8.5 1.89543 7.60457 1 6.5 1C5.39543 1 4.5 1.89543 4.5 3Z"
+                          stroke="#212121" stroke-linecap="round"></path>
+                    <path d="M9.5 10C9.5 11.1046 10.3954 12 11.5 12C12.6046 12 13.5 11.1046 13.5 10C13.5 8.89543 12.6046 8 11.5 8C10.3954 8 9.5 8.89543 9.5 10Z"
+                          stroke="#212121" stroke-linecap="round"></path>
+                    <path d="M3.5 17C3.5 18.1046 4.39543 19 5.5 19C6.60457 19 7.5 18.1046 7.5 17C7.5 15.8954 6.60457 15 5.5 15C4.39543 15 3.5 15.8954 3.5 17Z"
+                          stroke="#212121" stroke-linecap="round"></path>
+                </svg>
+            </div>
+
+        </div>
+    <div>
+        <div class="questions-page-buttons display-flex justify-end gap-3">
+               {% if user.is_authenticated %}
+                <a role="button" tabindex="0" aria-label="İmport Button. You can import your questions" href="{% url 'question_form' %}" class="btn-import text-decoration-none btn btn-import  display-flex pr-6 pl-6 pt-3 pb-3 fs-16 radius-2-5 txt-white fw-bold border-none outline cursor-pointer gap-2-5 justify-center align-center bg-button-green">Import Question</a>
+                <a href="{% url 'export_questions' %}" role="button" tabindex="0" aria-label="Export Button. You can export questions"  class="btn-import text-decoration-none btn btn-import bg-red display-flex pr-6 pl-6 pt-3 pb-3 fs-16 radius-2-5 txt-white fw-bold border-none outline cursor-pointer gap-2-5 justify-center align-center">Export Questions</a>
+            {% endif %}
+        </div>
+    </div>
+        <div class="test-wrapper display-flex">
+            <div class="test-elements-wrapper display-grid w-100 gap-6" >
+                {% if questions|length > 0 %}
+                    {% for question in questions %}
+                        {% include 'partials/_questions.html' %}
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<section id="footer" class="footer-section display-flex flex-col p-23-5 bg-main">
+            <div class="footer-wrapper display-grid justify-center" role="section" aria-label="Footer section" tabindex="0">
+                    <div class="footer-text display-flex gap-13 flex-col txt-white">
+                        <h1 class="fs-36  fw-bold" tabindex="0" aria-label="Interviewer Logo">INTERVIEWER</h1>
+                        <p class="line-height-7 fs-16 fw-400" tabindex="0" >Interviewer is your go-to platform for interview preparation,
+                            offering a diverse range of interview questions and a supportive community to ensure success in recruitment
+                            exams across various industries. We empower job seekers to master interviews and excel in their career pursuits.</p>
+                        <h2><span class="fs-22 fw-400" tabindex="0" >
+                            contact.interviewer.gp@gmail.com
+                        </span></h2>
+                    </div>
+                    <div class="footer-menu pl-30 pr-30">
+                        <nav class="navbar">
+                            <ul class="navbar-list display-flex flex-col gap-15" tabindex="0" role="navigation" aria-label="Footer Navigation Menu">
+                                <li class=""><a href="" class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Home</a></li>
+                                <li class=""><a href="http://127.0.0.1:8000/#about" class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">About us</a></li>
+                                <li class=""><a href="http://127.0.0.1:8000/#services" class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Services</a></li>
+                                <li class=""><a href="http://127.0.0.1:8000/questions" class="nav-link nav-link-ltr text-decoration-none display-inline-block txt-white fs-16 p-r">Interview</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-form display-flex flex-col gap-8">
+                            <h1 tabindex="0" class="fs-28 txt-white fw-500">Contact With Us</h1>
+                        <form  method="post" action="{% url 'contact' %}" class="display-flex flex-col gap-10" role="form" aria-label="You can reach us" tabindex="0">
+                          {% csrf_token %}
+                            <div class="display-flex flex-col gap-5">
+                                <label tabindex="0" for="fname" class="fs-16 fw-400 txt-white">Name:</label>
+                            <input tabindex="0" type="text" id="fname" name="name" class="form-input pb-5 fs-22 outline border-0 bg-transparent txt-white">
+                          </div>
+                            <div class="display-flex flex-col gap-5">
+                            <label tabindex="0" for="femail" class="fs-16 fw-400 txt-white">Email:</label>
+                            <input tabindex="0" type="text" id="femail" name="email" class="form-input pb-5 fs-22 outline border-0 bg-transparent txt-white">
+                                </div>
+                            <div class="display-flex flex-col gap-5">
+                            <label tabindex="0" for="ftextarea" class="fs-16 fw-400 txt-white">Message:</label>
+                            <textarea tabindex="0" name="message" id="ftextarea"   class="contact-textarea form-input pb-3 fs-22 outline border-0 bg-transparent txt-white"></textarea>
+                                </div>
+                            <button type="submit" role="button" tabindex="0" class="btn contact-button display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center width-24">Submit
+                              <i class="fa-solid fa-arrow-right"  ></i>
+                            </button>
+
+                        </form>
+                    </div>
+            </div>
+     </section>
+<footer class="copyright display-flex align-center justify-center bg-yellow pt-5 pb-5 ">
+                       <div class="copyright-text pb-10 pt-10">
+                            <h3 tabindex="0" class="fs-18 txt-blue-900 fw-500">Copyright 2024 Interviewer® All Rights Reserved.</h3>
+                       </div>
+       </footer>

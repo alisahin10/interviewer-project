@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="sign-container display-flex  justify-center align-center pt-23-5 pb-23-5">
+        <div class="signPanel display-grid p-r">
+            <!-- Login Left Panel Start Here -->
+            <div class="signLeft display-flex justify-center align-center p-18 ">
+                <div class="signLogo p-a"><span class="fs-36 fw-bold txt-white">INTERVIEWER</span></div>
+                <div class="textInfo display-flex gap-2 justify-center align-center flex-col">
+                    <h4 class="fw-500 fs-24 txt-white">Nice to see you again</h4>
+                    <span class="fs-34 txt-white w-100 fw-bold text-center">WELCOME BACK</span>
+                    <hr>
+                    <p class="text-center fw-lighter txt-white line-height-5 fs-14">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Quia nisi voluptatum sit quaerat ad molestiae.
+                        Nemo laudantium quisquam vel iure!
+                    </p>
+                </div>
+            </div>
+            <!-- Login Left End Start Here -->
+
+            <!-- Login Right Panel Start Here -->
+            <div class="signRight display-flex align-center justify-center flex-col p-18">
+                <h2 class="txt-blue-900 fs-24 fw-bold">Login Account</h2>
+                <form action="#" method="post" class="mt-6">
+                    {% csrf_token %}
+                    {% if error %}
+                        <div class="alert alert-danger">
+                            {
+                                {
+                                    error
+                                }
+                            }
+                        </div>
+                    {% endif %}
+                    <div class="input-box">
+                        <label for="username"></label>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password"></label>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="remember-me display-flex justify-center align-center gap-5 mr-1 ml-1 mt-6">
+                        <label class="fs-14 display-flex justify-center align-center" >
+                            <input type="checkbox" name="remember" id="remember" >Keep me signed in
+                        </label>
+                        <a href="{% url 'register' %}" class="txt-blue-400 fs-14">Don't have an account ?</a>
+                    </div>
+                    <button type="submit"
+                            class=" bg-yellow btn-import mt-12 text-center w-100 btn p-2-5 fs-18 cursor-pointer radius-2-5 border-none   text-decoration-none txt-text-color">
+                        Sign in
+                    </button>
+                </form>
+
+            </div>
+            <!-- Login Right Panel end Here -->
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,161 @@
+{% extends 'user-profile-base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="user-profile-content display-flex flex-col flex-wrap gap-10 w-100 p-5">
+        <div class="user-heading display-flex justify-between pr-5 pl-5">
+            <h3 class="fs-34 txt-blue-900 fw-600">
+                <span>Hello,  </span> {{ user.first_name }} {{ user.last_name }}
+            </h3>
+              <a href="{% url 'profile_update' %}" class="btn btn-user-interview fw-bold  display-flex pr-6 pl-6 pt-3 pb-3 bg-yellow fs-16 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center ">
+               New Interview Test
+            </a>
+        </div>
+        <div class="user-all-data-item-wrapper  w-100 ">
+            <div class="user-all-data-item display-flex bg-white p-5 radius-6 bg-yellow gap-4 ">
+                <div class="p-r  user-all-data-list-item hours-spent pr-5 pl-5  pt-8 pb-8 display-flex flex-col justify-center align-center">
+                    <img src="https://fastly.picsum.photos/id/48/5000/3333.jpg?hmac=y3_1VDNbhii0vM_FN6wxMlvK27vFefflbUSH06z98so"
+                         alt=""
+                         class="p-a top-0 left-0 bottom-0 right-0 radius-6">
+                    <h3 class="fs-40 fw-600 z-index-1 txt-white">500</h3>
+                    <span class="fs-18 fw-500 z-index-1 txt-white">Total hours</span>
+                </div>
+                <div class="p-r  user-all-data-list-item hours-spent pr-5 pl-5  pt-8 pb-8 display-flex flex-col justify-center align-center">
+                    <img src="https://fastly.picsum.photos/id/19/2500/1667.jpg?hmac=7epGozH4QjToGaBf_xb2HbFTXoV5o8n_cYzB7I4lt6g"
+                         alt=""
+                         class="p-a top-0 left-0 bottom-0 right-0 radius-6">
+                    <h3 class="fs-40 fw-600 z-index-1 txt-white">21</h3>
+                    <span class="fs-18 fw-500 z-index-1 txt-white ">Completed tests</span>
+                </div>
+                <div class="p-r  user-all-data-list-item hours-spent pr-5 pl-5  pt-8 pb-8 display-flex flex-col justify-center align-center">
+                    <img src="https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s"
+                         alt=""
+                         class="p-a top-0 left-0 bottom-0 right-0 radius-6">
+                    <h3 class="fs-40 fw-600 z-index-1 txt-white">501</h3>
+                    <span class="fs-18 fw-500 z-index-1  txt-white">Total points</span>
+                </div>
+                <div class="p-r  user-all-data-list-item hours-spent pr-5 pl-5  pt-8 pb-8 display-flex flex-col justify-center align-center">
+                    <img src=" https://fastly.picsum.photos/id/1023/300/200.jpg?hmac=yqbis3mJN1Go0CYQeX0R9x5QW7fKISiOd2eEOT5FBYg"
+                         alt=""
+                         class="p-a top-0 left-0 bottom-0 right-0 radius-6">
+                    <h3 class="fs-40 fw-600 z-index-1 txt-white">1</h3>
+                    <span class="fs-18 fw-500 z-index-1 txt-white ">Waiting</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="user-profile-test-section w-100 bg-white radius-6 p-5">
+            <h3 class="fs-24 fw-500 txt-blue-400">Your Test </h3>
+            <div class="user-profile-test-item-wrapper mt-8 display-flex flex-col gap-8">
+                <div class="user-profile-test-list-item display-flex justify-between align-center bg-user-test-list pt-3 pb-3 pr-5 pl-5 radius-5">
+                    <div class="user-profile-test-name display-flex gap-2 flex-col">
+                        <h3 class="fs-18 fw-400 txt-text-color">Genel Yetenek Testi</h3>
+                        <h3 class="fs-14 opacity-0-7 fw-300">
+                            <span>Date: </span>
+                            21.11.2023
+                        </h3>
+                    </div>
+                    <div class="user-profile-test-grade text-center">
+                        <h3 class="fs-18 fw-400 txt-text-color">80 <span>/</span> 100</h3>
+                        <span class="opacity-0-7 fs-14 fw-300">Your Grade</span>
+                    </div>
+                    <button class="btn btn-user-test-list fs-18 fw-500 txt-white bg-button-green display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center width-28">
+                        Completed
+                    </button>
+                </div>
+                <div class="user-profile-test-list-item display-flex justify-between align-center bg-user-test-list pt-3 pb-3 pr-5 pl-5 radius-5">
+                    <div class="user-profile-test-name display-flex gap-2 flex-col">
+                        <h3 class="fs-18 fw-400 txt-text-color">Genel Yetenek Testi</h3>
+                        <h3 class="fs-14 opacity-0-7 fw-300">
+                            <span>Date: </span>
+                            21.11.2023
+                        </h3>
+                    </div>
+                    <div class="user-profile-test-grade text-center">
+                        <h3 class="fs-18 fw-400 txt-text-color">80 <span>/</span> 100</h3>
+                        <span class="opacity-0-7 fs-14 fw-300">Your Grade</span>
+                    </div>
+                    <button class="btn btn-user-test-list fs-18 fw-500 txt-white bg-button-green display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center width-28">
+                        Completed
+                    </button>
+                </div>
+                <div class="user-profile-test-list-item display-flex justify-between align-center bg-user-test-list pt-3 pb-3 pr-5 pl-5 radius-5">
+                    <div class="user-profile-test-name display-flex gap-2 flex-col">
+                        <h3 class="fs-18 fw-400 txt-text-color">Genel Yetenek Testi</h3>
+                        <h3 class="fs-14 opacity-0-7 fw-300">
+                            <span>Date: </span>
+                            21.11.2023
+                        </h3>
+                    </div>
+                    <div class="user-profile-test-grade text-center">
+                        <h3 class="fs-18 fw-400 txt-text-color">80 <span>/</span> 100</h3>
+                        <span class="opacity-0-7 fs-14 fw-300">Your Grade</span>
+                    </div>
+                    <button class="btn btn-user-test-list fs-18 fw-500 txt-white bg-yellow display-flex pr-6 pl-6 pt-3 pb-3 fs-18 radius-2-5 border-none outline cursor-pointer gap-2-5 justify-center width-28">
+                        In progress
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-top-picks-for-you-section w-100 bg-white radius-6 p-5 display-flex flex-col gap-4">
+            <h3 class="fs-24 fw-500 txt-blue-400 ">Top picks for you</h3>
+            <div class="user-top-picks-for-you-wrapper ">
+                <div class="user-top-picks-for-you-items display-flex justify-between flex-wrap w-100">
+                    <div class="user-top-picks-for-you-item display-flex flex-col gap-3">
+                        <div class="user-top-picks-for-you-image">
+                            <img src="{% static 'images/services.jpeg' %}" alt="">
+                        </div>
+                        <div class="user-top-picks-for-you-text">
+                            <a href="" class="fs-18 fw-400 txt-text-color text-decoration-none">Genel Yetenek Testi</a>
+                            <h3 class="fs-14 opacity-0-7 fw-300 mt-2">
+                                <span>Date: </span>
+                                    {{question.date_posted|date:'d.m.Y'}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="user-top-picks-for-you-item display-flex flex-col gap-3">
+                        <div class="user-top-picks-for-you-image">
+                            <img src="{% static 'images/services.jpeg' %}" alt="">
+                        </div>
+                        <div class="user-top-picks-for-you-text">
+                            <a href="" class="fs-18 fw-400 txt-text-color text-decoration-none">Genel Yetenek Testi</a>
+                            <h3 class="fs-14 opacity-0-7 fw-300 mt-2">
+                                <span>Date: </span>
+                                21.11.2023
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="user-top-picks-for-you-item display-flex flex-col gap-3">
+                        <div class="user-top-picks-for-you-image">
+                            <img src="{% static 'images/services.jpeg' %}" alt="">
+                        </div>
+                        <div class="user-top-picks-for-you-text">
+                            <a href="" class="fs-18 fw-400 txt-text-color text-decoration-none">Genel Yetenek Testi</a>
+                            <h3 class="fs-14 opacity-0-7 fw-300 mt-2">
+                                <span>Date: </span>
+                                21.11.2023
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="user-top-picks-for-you-item display-flex flex-col gap-3">
+                        <div class="user-top-picks-for-you-image">
+                            <img src="{% static 'images/services.jpeg' %}" alt="">
+                        </div>
+                        <div class="user-top-picks-for-you-text">
+                            <a href="" class="fs-18 fw-400 txt-text-color text-decoration-none">Genel Yetenek Testi</a>
+
+                            <h3 class="fs-14 opacity-0-7 fw-300 mt-2">
+                                <span>Date: </span>
+                                21.11.2023
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

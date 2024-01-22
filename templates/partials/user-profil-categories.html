@@ -1,0 +1,47 @@
+{% load static %}
+
+
+<div class="user-info display-flex flex-col align-center justify-center w-100 gap-5 ">
+    <div tabindex="0" aria-label="User avatar" class="user-logo width-25 height-25 bg-white radius" style="background-image: url({{ user.profile.image.url }}); border: 2px solid rgba(0,0,0, 0.9)">
+
+    </div>
+    <div class="user-text text-center">
+        <h3 tabindex="0" class="user-name fs-18 txt-blue-400 fw-500"> {{ user.first_name }} {{ user.last_name }}</h3>
+        <h4 tabindex="0" class="txt-blue-900 fs-16 fw-400 mt-2">{{ user.email }}</h4>
+    </div>
+</div>
+
+<ul class="categories-list display-flex flex-col  list-none  gap-9" >
+    <li  class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100  gap-3 display-flex">
+        <a href="{% url 'profile' %}" tabindex="0"
+           class="categories-list-link text-decoration-none display-flex  txt-text-color justify-start w-100  ml-14">
+            <h3 class="user-nav-item fs-16 fw-400">Dashboard</h3>
+        </a>
+    </li>
+    <li  class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100  gap-3 display-flex">
+        <a href="#" tabindex="0"
+           class="categories-list-link text-decoration-none display-flex  txt-text-color justify-start w-100  ml-14">
+            <h3 class="user-nav-item fs-16 fw-400">Assigment</h3>
+        </a>
+    </li>
+    <li  class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100  gap-3 display-flex">
+        <a href="#" tabindex="0"
+           class="categories-list-link text-decoration-none display-flex txt-text-color justify-start w-100 ml-14">
+            <h3 class="user-nav-item fs-16 fw-400">Messages</h3>
+        </a>
+    </li>
+    <li class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100  gap-3 display-flex">
+        <a href="{% url 'profile_update' %}" tabindex="0"
+           class="categories-list-link text-decoration-none display-flex  justify-start w-100  txt-text-color  ml-14">
+            <h3 class="user-nav-item fs-16 fw-400">Settings</h3>
+        </a>
+    </li>
+    <li class="categories-list-item bg-secondary pb-3 pt-3 pr-3 pl-3 w-100  gap-3 display-flex">
+        <a href="{% url 'logout' %}" tabindex="0"
+           class="categories-list-link text-decoration-none display-flex  justify-start w-100  ml-14 txt-text-color">
+            <h3 class="user-nav-item fs-16 fw-400 ">Logout
+            </h3>
+        </a>
+    </li>
+
+</ul>

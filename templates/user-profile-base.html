@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviewer</title>
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css' %}">
+</head>
+<body>
+<div class="display-flex flex-col h-100vh p-r">
+    {% include 'partials/header.html' %}
+    <main class="content">
+        <section id="userprofile" class="user-profile-container  pt-10 pb-23-5 pr-23-5 pl-23-5 pt-23-5 bg-product ">
+            <div class="user-profile-wrapper display-grid gap-10" role="div" tabindex="0" aria-label="User profile. You can find your information here">
+                <nav role="navigation" tabindex="0" aria-label="User Profile Aside menu" class="categories-menu-nav sidebar bg-secondary pr-3 pl-3 pt-5 pb-5  radius-2-5 display-flex flex-col gap-10 h-100vh"
+                     id="dropdown-menu">
+                    {% include 'partials/user-profil-categories.html' %}
+                </nav>
+                <div class="user-container display-flex flex-col gap-12" id="question-container">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+                 <div class="display-flex flex-col bg-white radius-5 p-2 gap-2 p-f" style="top: 120px; right: 20px">
+                  <img src="{% static 'images/turkey (1).png' %}" alt="" class="cursor-pointer responsive w-25 h-auto">
+                  <img src="{% static 'images/united-kingdom (2).png' %}" alt="" class="cursor-pointer responsive w-25 h-auto">
+        </div>
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+    <button class="up-button border-none bg-txt cursor-pointer txt-yellow height-16 width-16 p-f bg-text"
+            id="myUpButton" onclick="topFunction()">
+        <i class="fa-solid fa-sort-up fs-26"></i>
+    </button>
+</div>
+<script src="{% static 'myjs/myjs.js' %}"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviewer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css' %}">
+</head>
+<body>
+ <div class=" display-flex flex-col p-r">
+        {% include 'partials/header.html' %}
+        <main class="content">
+                {% block content %}
+                {% endblock %}
+
+        </main>
+        {% include 'partials/footer.html' %}
+        <button class="up-button border-none  bg-txt cursor-pointer txt-yellow height-16 width-16 p-f bg-text" id="myUpButton" onclick="topFunction()">
+                   <i class="fa-solid fa-caret-up fs-24"></i>
+        </button>
+
+        <div class="display-flex flex-col bg-white radius-5 p-2 gap-2 p-f" style="top: 120px; right: 20px">
+                  <img src="{% static 'images/turkey (1).png' %}" alt="" class="cursor-pointer responsive w-25 h-auto">
+                  <img src="{% static 'images/united-kingdom (2).png' %}" alt="" class="cursor-pointer responsive w-25 h-auto">
+        </div>
+
+    </div>
+ <script src="{%  static 'myjs/myjs.js' %}"></script>
+
+ <script src="{%  static 'myjs/jquery.min.js' %}"></script>
+</body>
+</html>
+
+
+
+

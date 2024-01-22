@@ -1,0 +1,106 @@
+{% extends "product-base.html" %}
+{% load static %}
+{% block content %}
+    <div class="question-detail-container w-100" aria-label="Test Detail Area" tabindex="0">
+        <div class="question-detail-section display-flex flex-col  w-100">
+            <div class="display-flex questions-page-buttons justify-end gap-3">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'question_form' %}"
+                       class="text-decoration-none btn btn-import  display-flex pr-6 pl-6 pt-3 pb-3 fs-16 radius-2-5 txt-white fw-bold border-none outline cursor-pointer gap-2-5 justify-center align-center bg-button-green">Import
+                        Question</a>
+                    <a href="{% url 'export_questions' %}"
+                       class="text-decoration-none btn btn-import bg-red display-flex pr-6 pl-6 pt-3 pb-3 fs-16 radius-2-5 txt-white fw-bold border-none outline cursor-pointer gap-2-5 justify-center align-center">Export
+                        Questions</a>
+                {% endif %}
+            </div>
+            <div class="question-detail-elements-wrapper mt-10 w-100" aria-label="Test Questions" tabindex="0">
+                <div class="question-detail-items display-flex bg-secondary flex-col gap-6 pr-5 pl-5 pt-3 pb-3  radius-10"
+                     style="overflow: auto; height: 700px">
+                    <div class="question-detail-info-section display-flex flex-col bg-white p-5 radius-7 gap-10 ">
+                        <div class="test-info display-flex justify-between ">
+                            <h3 tabindex="0" class="fs-16 fw-500 txt-text-color"><span
+                                    class="txt-blue-900 fs-16 fw-700">Test name: </span>{{  question.test_name}}</h3>
+                            <h3 tabindex="0" class="fs-16 fw-500 txt-text-color"><span class="txt-blue-900 fs-16 fw-700">Departmant name: </span>{{ question.department_name}}
+                            </h3>
+                            <h3 tabindex="0" class="fs-16 fw-500 txt-text-color"><span class="txt-blue-900 fs-16 fw-700">Number of questions: </span>{{ question.number_of_questions}}
+                            </h3>
+                        </div>
+                        <p tabindex="0" class="fs-16 fw-400 txt-text-color line-height-6">{{ question.description|safe}}</p>
+                    </div>
+
+
+ {% for test in question.tests.all %}
+                    <div class="question-detail-item-one display-flex flex-col bg-white gap-6 radius-7 p-5">
+                        <h3 tabindex="0" class="question-heading fs-18 fw-500 txt-text-color">{{ test.title }}</h3>
+
+                        <p tabindex="0" class="fs-20 txt-text-color question-paragraph fw-500 ">{{  test.question_description }}</p>
+                        {% if test.question_image %}
+                              <img tabindex="0" aria-label="Question Image" src="{{ test.question_image.url }}" alt="" class="question-image">
+                    {% endif %}
+                        <div class="question-answer display-flex flex-col gap-4 justify-between align-start">
+                            <div class="answer-one display-flex gap-4  align-center" role="radio" aria-label="Answer one" tabindex="0">
+                                <input type="checkbox" name="answer1" id="answer1" tabindex="0" aria-label="Check Radio for Answer"
+                                       class="check-radio-answer height-5 width-5 bg-red">
+                                <label for="answer"
+                                       class="question-answer-area fs-20 fw-400 txt-text-color display-flex align-center">
+                                    <span tabindex="0">{{ test.answer_one }}</span>
+                                    <!--   <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive"> -->
+                                </label>
+
+                            </div>
+                            <div class="answer-one display-flex gap-4  align-center" role="radio" aria-label="Answer two" tabindex="0">
+                                <input type="checkbox" name="answer2" id="answer2" tabindex="0" aria-label="Check Radio for Answer"
+                                       class="check-radio-answer height-5 width-5 bg-red">
+                                <label for="answer"
+                                       class="question-answer-area fw-400  fs-20  txt-text-color display-flex align-center">
+                                    <span tabindex="0">{{ test.answer_two }}</span>
+                                    <!--   <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive"> -->
+                                </label>
+
+                            </div>
+                            <div class="answer-one display-flex gap-4  align-center" role="radio" aria-label="Answer three" tabindex="0">
+                                <input type="checkbox" name="answer3" id="answer3" tabindex="0" aria-label="Check Radio for Answer"
+                                       class="check-radio-answer height-5 width-5 bg-red">
+                                <label for="answer"
+                                       class="question-answer-area  fs-20  fw-400 txt-text-color display-flex align-center">
+                                    <span tabindex="0">{{ test.answer_three }}</span>
+                                    <!--   <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive"> -->
+                                </label>
+
+                            </div>
+                            <div class="answer-one display-flex gap-4  align-center" role="radio" aria-label="Answer four" tabindex="0">
+                                <input type="checkbox" name="answer4" id="answer4" tabindex="0" aria-label="Check Radio for Answer"
+                                       class="check-radio-answer height-5 width-5 bg-red">
+                                <label for="answer"
+                                       class="question-answer-area  fs-20  fw-400 txt-text-color display-flex align-center">
+                                    <span tabindex="0">{{ test.answer_four }}</span>
+                                    <!--   <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive"> -->
+                                </label>
+
+                            </div>
+                            <div class="answer-one display-flex gap-4  align-center" role="radio" aria-label="Answer five" tabindex="0">
+                                <input type="checkbox" name="answer5" id="answer5" tabindex="0" aria-label="Check Radio for Answer"
+                                       class="check-radio-answer height-5 width-5 bg-red">
+                                <label for="answer"
+                                       class="question-answer-area fs-20  fw-400 txt-text-color display-flex align-center">
+                                    <span tabindex="0">{{ test.answer_five }}</span>
+                                    <!--   <img src="{% static 'images/about-rocket2.png' %}" alt="" class="responsive"> -->
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+{% endfor %}
+  <a  role="button" tabindex="0" href="{% url 'completetest' %}"
+                       class="text-decoration-none btn btn-import bg-button-green display-flex pr-6 pl-6 pt-3 pb-3 fs-16 radius-2-5 txt-white fw-bold border-none outline cursor-pointer gap-2-5 justify-center  align-center">Complete Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+<!-- Rıdvan -->
+
