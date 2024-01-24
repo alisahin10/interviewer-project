@@ -86,12 +86,79 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'interviewer-project-db',
+        'USER': 'alisahin',
+        'PASSWORD': 'FAq1auyu@',
+        'HOST': '34.116.249.42',
+        'PORT': '5432',
     }
 }
+
+
+# Localhost PostgreSQL Database Connection
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'interviewer-project',
+#         'USER': 'postgres',
+#         'PASSWORD': 'FAq1auyu@',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+#
+# # Use the Cloud SQL Proxy if running on App Engine
+# if os.getenv('GAE_INSTANCE', None):
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'HOST': '/cloudsql/interviewer-project:europe-central2:interviewer-instance',
+#             'USER': 'postgres',
+#             'PASSWORD': 'FAq1auyu@',
+#             'NAME': 'interviewer-project',
+#             'PORT': '5432',  # PostgreSQL default port
+#         }
+#     }
+# else:
+#     # If running locally or in a non-GAE environment, use the public IP
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'HOST': '34.116.249.42',
+#             'USER': 'postgres',
+#             'PASSWORD': 'FAq1auyu@',
+#             'NAME': 'interviewer-project',
+#             'PORT': '5432',  # PostgreSQL default port
+#         }
+#     }
+#
+# # Additional check for credentials to set local development defaults
+# try:
+#     from google.auth import exceptions
+#     from google.auth import default
+#     credentials, project = default()
+#     if credentials.requires_scopes:
+#         raise exceptions.DefaultCredentialsError
+# except exceptions.DefaultCredentialsError:
+#     DATABASES['default']['HOST'] = '127.0.0.1'
+#     DATABASES['default']['PORT'] = '5432'
+
+
+
+
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
