@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-mza_p*v$nc*ra-ksm$)b$j23ted7kq8at0fb2umg@(oiix6cd8
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['interviewer-project.site', 'www.interviewer-project.site']
+
 
 
 # Application definition
