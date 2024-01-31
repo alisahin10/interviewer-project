@@ -22,7 +22,7 @@
                     <div class="footer-form display-flex flex-col gap-8">
                             <h1 tabindex="0" class="fs-28 txt-white fw-500">Contact With Us</h1>
                         <form  method="post" action="{% url 'contact' %}" class="display-flex flex-col gap-10" role="form" aria-label="You can reach us" tabindex="0">
-                         #TOKEN
+                          {% csrf_token %}
                             <div class="display-flex flex-col gap-5">
                                 <label tabindex="0" for="fname" class="fs-16 fw-400 txt-white">Name:</label>
                             <input tabindex="0" type="text" id="fname" name="name" class="form-input pb-5 fs-22 outline border-0 bg-transparent txt-white">

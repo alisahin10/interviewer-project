@@ -13,7 +13,7 @@
             <div class=" display-flex flex-col  w-100">
             <h1 tabindex="0" class="fs-24 txt-text-color">Settings</h1>
             <form method="POST" enctype="multipart/form-data" class="mt-5" tabindex="0" role="form">
-                #Token
+                {% csrf_token %}
 
                     <div id="div_id_username" class="display-flex flex-col justify-start align-start gap-2">
                         <label for="id_username" class=" requiredField" tabindex="0">
