@@ -92,64 +92,13 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'interviewer-project-db',
-        'USER': 'alisahin',
+        'NAME': 'interviewer-project',
+        'USER': 'postgres',
         'PASSWORD': 'FAq1auyu@',
-        'HOST': '34.116.249.42',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-
-
-# Localhost PostgreSQL Database Connection
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'interviewer-project',
-#         'USER': 'postgres',
-#         'PASSWORD': 'FAq1auyu@',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
-#
-# # Use the Cloud SQL Proxy if running on App Engine
-# if os.getenv('GAE_INSTANCE', None):
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'HOST': '/cloudsql/interviewer-project:europe-central2:interviewer-instance',
-#             'USER': 'postgres',
-#             'PASSWORD': 'FAq1auyu@',
-#             'NAME': 'interviewer-project',
-#             'PORT': '5432',  # PostgreSQL default port
-#         }
-#     }
-# else:
-#     # If running locally or in a non-GAE environment, use the public IP
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'HOST': '34.116.249.42',
-#             'USER': 'postgres',
-#             'PASSWORD': 'FAq1auyu@',
-#             'NAME': 'interviewer-project',
-#             'PORT': '5432',  # PostgreSQL default port
-#         }
-#     }
-#
-# # Additional check for credentials to set local development defaults
-# try:
-#     from google.auth import exceptions
-#     from google.auth import default
-#     credentials, project = default()
-#     if credentials.requires_scopes:
-#         raise exceptions.DefaultCredentialsError
-# except exceptions.DefaultCredentialsError:
-#     DATABASES['default']['HOST'] = '127.0.0.1'
-#     DATABASES['default']['PORT'] = '5432'
-
 
 
 
@@ -161,11 +110,6 @@ DATABASES = {
 #     }
 # }
 
-
-
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
