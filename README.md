@@ -4,6 +4,9 @@ Interviewer Project
 
 Welcome to the Interviewer App for Graduation Project, a Python Django project designed to help you prepare for interviews at private business companies. This web application provides a comprehensive set of features to enhance your interview readiness, including authentication, question import/export, profile settings, a landing page, contact option, search functionality, profile page, and a dynamic interview question page with question tests.
 
+![409203925_303197005376898_7620616755871213131_n jpg](https://github.com/alisahin10/interviewer-project/assets/78854370/d2c0d64a-c5dd-4cee-b102-bf8e5291aabf)
+
+
 Features
 
 1. Authentication
